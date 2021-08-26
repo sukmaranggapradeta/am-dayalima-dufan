@@ -1,23 +1,33 @@
 import React from "react";
 import { Wrapper } from "./style";
+import { Modal } from "react-materialize";
 
 function Top3(props) {
-  return (
+  const members = props.dataTeam.filter(
+    (el) => el.teamName === props.player.nama
+  );
+
+  const trigger = (
     <Wrapper className="three item">
       <div className="pos">3</div>
       <div>
         {" "}
-        <img
-          className="pic"
-          src={props.player.pic}
-          //   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlVKgygD3sMsOQbZBdUC1GFxEtCTDZalsqSeom52HOEdG5pzG7&s"
-          //   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNBKI9pN_5dfcrY-UCdZz6Cikn8wD5k94e26ceJuukEMPM1GICLw&s"
-          alt=""
-        />
+        <img className="pic" src={props.player.pic} alt="" />
       </div>
       <div className="name">{props.player.nama}</div>
       <div className="score">{props.player.poin}</div>
     </Wrapper>
+  );
+
+  return (
+    <Modal header={`Team ${props.player.nama}`} trigger={trigger}>
+      {members.length > 0 &&
+        members[0].member.map((item, index) => (
+          <p key={index}>
+            {index + 1}. {item}
+          </p>
+        ))}
+    </Modal>
   );
 }
 

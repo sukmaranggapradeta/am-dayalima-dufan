@@ -1,0 +1,19 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "dufan-players",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "poin",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "time",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

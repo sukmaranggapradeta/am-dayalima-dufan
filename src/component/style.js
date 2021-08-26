@@ -49,7 +49,7 @@ export const Wrapper = styled.div`
   .top3 .item .pic {
     position: absolute;
     top: -2rem;
-    left: 20%;
+    left: 41%;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -65,7 +65,7 @@ export const Wrapper = styled.div`
     margin-bottom: 0.5rem;
   }
   .top3 .item .name {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
   }
   .top3 .item .score {
@@ -84,7 +84,7 @@ export const Wrapper = styled.div`
   .top3 .item.one .pic {
     width: 75px;
     height: 75px;
-    left: 20%;
+    left: 41%;
   }
   .top3 .item:hover {
     -webkit-transform: scale(1.05);
@@ -138,7 +138,7 @@ export const Wrapper = styled.div`
   .list .item .name {
     flex-grow: 2;
     flex-basis: 10rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .list .item .score {
     margin-right: 1.5rem;
@@ -155,5 +155,25 @@ export const Wrapper = styled.div`
   }
   .list .item:hover .pos {
     opacity: 0.8;
+  }
+
+  /* IPAD / TABLET POTRAIT*/
+  @media (max-width: 768px) {
+    .top3 .item.one .pic {
+      left: 36%;
+    }
+    .top3 .item .pic {
+      left: 36%;
+    }
+  }
+
+  /* Mobile devices */
+  @media (max-width: 480px) {
+    .top3 .item .pic {
+      left: 20%;
+    }
+    .top3 .item.one .pic {
+      left: 20%;
+    }
   }
 `;
